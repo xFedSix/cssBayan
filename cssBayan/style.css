@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: bisque;
+}
+header {
+display: flex;
+width: 50rem;
+
+}
+h1 {
+    font-size: 3em;
+    border-bottom: thick solid gray;
+    padding-top: 1.5em;
+    width: 50rem;
+    padding-bottom: 2rem;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.title {
+    display: flex;
+    width: 50rem;
+    justify-content: space-between;
+    padding: 1.5em 0 ;
+}
+p {
+    font-size: 2em;
+    border: 2px;
+    border-color: gray;
+}
+.bug img {
+    padding-left: 35%;
+    padding-bottom: 2rem;
+}
+.musician img {
+    padding-left: 20%;
+    padding-bottom: 2rem;
+}
+.young_programmer img {
+    padding-left: 25%;
+    padding-bottom: 2rem;
+}
+.trash img {
+    padding-left: 14%;
+}
+.trash {
+    padding-bottom: 2rem;
+    margin-bottom: 4rem;
+}
+.bug {
+    padding-bottom: 2rem;
+}
+.musician {
+    padding-bottom: 2rem;
+}
+.young_programmer img {
+    padding-left: 25%;
+    padding-bottom: 2rem;
+}
+.programer_life {
+    padding-bottom: 2rem;
+}
+.wraper {
+    border-bottom: thick solid gray;
+}
