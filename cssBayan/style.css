@@ -30,6 +30,13 @@ h1 {
     align-items: center;
     cursor: pointer;
 }
+.container:hover .icon {
+    display: inline;
+    opacity: 1;
+}
+.container:hover p {
+    color: black;
+}
 .title {
     display: flex;
     width: 50rem;
@@ -40,6 +47,7 @@ p {
     font-size: 2em;
     border: 2px;
     border-color: gray;
+    color: rgb(13, 85, 229);
 }
 .bug img {
     padding-left: 35%;
@@ -80,7 +88,7 @@ p {
     opacity: 0;
 }
 .wraper:hover img {
-        animation: hover 4000ms;
+        animation: hover 10s;
         display: inline;
     }
     /* transform: rotate(45deg); */
