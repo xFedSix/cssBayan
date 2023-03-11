@@ -37,12 +37,14 @@ h1 {
 .container:hover p {
     color: black;
 }
-.title {
+/* .title {
     display: flex;
     width: 50rem;
     justify-content: space-between;
-    padding: 1.5em 0 ;
-}
+    padding: 1em 0 ;
+    column-gap: 2rem;
+} */
+
 p {
     font-size: 2em;
     border: 2px;
@@ -92,3 +94,21 @@ p {
         display: inline;
     }
     /* transform: rotate(45deg); */
+/* input[name=title]{
+        display: none;
+      } */
+      /* input[name=title]:checked + label{
+        pointer-events: auto;
+        display: inline;
+      } */
+      label{
+        cursor: pointer;
+        display: flex;
+        width: 50rem;
+        justify-content: space-between;
+        padding: 1em 0 ;
+    }
+    .input:checked img {
+        display: inline !important;
+        opacity: 1 !important;
+      }
