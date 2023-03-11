@@ -90,17 +90,14 @@ p {
     opacity: 0;
 }
 .wraper:hover img {
-        animation: hover 10s;
+        animation: hover 5s;
         display: inline;
     }
     /* transform: rotate(45deg); */
-/* input[name=title]{
+input[name=title]{
         display: none;
-      } */
-      /* input[name=title]:checked + label{
-        pointer-events: auto;
-        display: inline;
-      } */
+      }
+
       label{
         cursor: pointer;
         display: flex;
@@ -108,7 +105,7 @@ p {
         justify-content: space-between;
         padding: 1em 0 ;
     }
-    .input:checked img {
+    input[name=title]:checked + label + img {
         display: inline !important;
         opacity: 1 !important;
       }
