@@ -37,13 +37,6 @@ h1 {
 .container:hover p {
     color: black;
 }
-/* .title {
-    display: flex;
-    width: 50rem;
-    justify-content: space-between;
-    padding: 1em 0 ;
-    column-gap: 2rem;
-} */
 
 p {
     font-size: 2em;
@@ -51,31 +44,31 @@ p {
     border-color: gray;
     color: rgb(13, 85, 229);
 }
+.icon {
+    /* width: 20px; */
+    height: 2em;
+    padding: 0;
+}
 .bug img {
     padding-left: 35%;
-    padding-bottom: 2rem;
 }
 .musician img {
     padding-left: 20%;
-    padding-bottom: 2rem;
 }
 .young_programmer img {
     padding-left: 25%;
-    padding-bottom: 2rem;
 }
 .trash img {
     padding-left: 14%;
 }
 .trash {
-    padding-bottom: 2rem;
     margin-bottom: 4rem;
 }
-.bug, .musician, .programer_life {
+.bug, .musician, .programer_life, .young_programmer, .trash {
     padding-bottom: 2rem;
 }
 .young_programmer img {
     padding-left: 25%;
-    padding-bottom: 2rem;
 }
 .wraper {
     border-bottom: thick solid gray;
@@ -93,7 +86,7 @@ p {
         animation: hover 5s;
         display: inline;
     }
-    /* transform: rotate(45deg); */
+
 input[name=title]{
         display: none;
       }
@@ -105,7 +98,16 @@ input[name=title]{
         justify-content: space-between;
         padding: 1em 0 ;
     }
-    input[name=title]:checked + label + img {
+    input[name=title]:checked + label>.icon {
         display: inline !important;
         opacity: 1 !important;
+        transform: rotate(45deg);
+        padding: 0;
+      }
+      input[name=title]:checked + label~img {
+        display: inline !important;
+        opacity: 1 !important;
+      }
+      input[name=title]:checked + label>p {
+        color: black;
       }
