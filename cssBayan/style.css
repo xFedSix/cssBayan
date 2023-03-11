@@ -28,6 +28,7 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 .title {
     display: flex;
@@ -59,19 +60,27 @@ p {
     padding-bottom: 2rem;
     margin-bottom: 4rem;
 }
-.bug {
-    padding-bottom: 2rem;
-}
-.musician {
+.bug, .musician, .programer_life {
     padding-bottom: 2rem;
 }
 .young_programmer img {
     padding-left: 25%;
     padding-bottom: 2rem;
 }
-.programer_life {
-    padding-bottom: 2rem;
-}
 .wraper {
     border-bottom: thick solid gray;
 }
+@keyframes hover {
+    from { display: none; }
+    to { opacity: 1; }
+  }
+
+.bug img, .musician img, .programer_life img, .young_programmer img, .trash img {
+    display: none;
+    opacity: 0;
+}
+.wraper:hover img {
+        animation: hover 4000ms;
+        display: inline;
+    }
+    /* transform: rotate(45deg); */
