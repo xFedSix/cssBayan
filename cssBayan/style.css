@@ -11,18 +11,16 @@ body {
 header {
 display: flex;
 width: 50rem;
-
 }
 h1 {
     font-size: 3em;
     border-bottom: thick solid gray;
     padding-top: 1.5em;
-    width: 50rem;
+    /* width: 50rem; */
     padding-bottom: 2rem;
 }
-
 .container {
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -30,15 +28,6 @@ h1 {
     align-items: center;
     cursor: pointer;
 }
-.container:hover .icon {
-    opacity: 1;
-    width: auto;
-    height: 80%;
-}
-.container:hover p {
-    color: black;
-}
-
 p {
     font-size: 2em;
     border: 2px;
@@ -73,54 +62,128 @@ p {
 .wraper {
     border-bottom: thick solid gray;
 }
-
-
-.bug img, .musician img, .programer_life img, .young_programmer img, .trash img {
-    opacity: 0;
-    height: 0%;
-    width: 0%;
-}
 .title {
 display: flex;
 justify-content: space-between
 }
-.wraper:hover img {
-    position: static;
-    opacity: 1;
-    width: auto;
-    height: 100%;
-    transition: 2s ease;
-    }
-.wraper:hover .icon {
-    rotate: 45deg;
-    padding: 0;
-    transition: 0s;
-    }
-
 input[name=title]{
-        display: none;
-      }
+    display: none;
+  }
+@media (hover) , (min-width: 1280px) {
+    .container:hover .icon {
+        opacity: 1;
+        width: auto;
+        height: 80%;
+        transition: 1s;
+    }
+    .container:hover p {
+        color: black;
+    }
+    .bug img, .musician img, .programer_life img, .young_programmer img, .trash img {
+        opacity: 0;
+        height: 0%;
+        width: 0%;
+    }
+    .wraper:hover img {
+        position: static;
+        opacity: 1;
+        width: auto;
+        height: 100%;
+        transition: 2s ease;
+        }
+    .wraper:hover .icon {
+        rotate: 45deg;
+        padding: 0;
+        transition: 0.5s linear;
+        }
+          label{
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            width: 50rem;
+            justify-content: space-between;
+            padding: 1em 0 ;
+        }
+        input[name=title]:checked + label>.title .icon {
+            opacity: 1;
+            width: auto;
+            height: 80%;
+            rotate: 45deg;
+            padding: 0;
+          }
+          input[name=title]:checked + label>img {
+            width: auto;
+            height: auto;
+            opacity: 1;
+          }
+          input[name=title]:checked + label>.title p {
+            color: black;
+          }
 
-      label{
-        cursor: pointer;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        width: 50rem;
-        justify-content: space-between;
-        padding: 1em 0 ;
+  }
+@media (max-width: 820px) {
+    .container {
+        max-width: 80%;
+        margin: 0 auto;
+        width: auto;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1em;
+    }
+      .bug img, .musician img, .programer_life img, .young_programmer img, .trash img {
+        opacity: 0;
+        height: 0%;
+        width: 0%;
     }
     input[name=title]:checked + label>.title .icon {
         opacity: 1;
         width: auto;
-        height: 80%;
+        height: auto;
         rotate: 45deg;
         padding: 0;
       }
       input[name=title]:checked + label>img {
-        width: auto;
-        height: auto;
+        width: 60%;
+        height: 60%;
         opacity: 1;
       }
       input[name=title]:checked + label>.title p {
         color: black;
       }
+  }
+@media (max-width: 320px) {
+    .container {
+        max-width: 80%;
+        margin: 0 auto;
+        width: auto;
+    }
+    h1 {
+    font-size: 1rem;
+    }
+    p {
+        font-size: 0.5em;
+    }
+    .bug img, .musician img, .programer_life img, .young_programmer img, .trash img {
+        opacity: 0;
+        height: 0%;
+        width: 0%;
+    }
+    input[name=title]:checked + label>.title .icon {
+        opacity: 1;
+        width: auto;
+        height: auto;
+        rotate: 45deg;
+        padding: 0;
+      }
+      input[name=title]:checked + label>img {
+        width: 60%;
+        height: 60%;
+        opacity: 1;
+      }
+      input[name=title]:checked + label>.title p {
+        color: black;
+      }
+}
