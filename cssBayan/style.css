@@ -124,7 +124,7 @@ input[name=title]{
 @media (max-width: 820px) {
     .container {
         max-width: 82vmin;
-        margin: 0px 15%;
+        margin: 0px 21%;
         width: auto;
     }
     h1 {
