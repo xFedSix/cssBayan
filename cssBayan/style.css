@@ -31,8 +31,9 @@ h1 {
     cursor: pointer;
 }
 .container:hover .icon {
-    display: inline;
     opacity: 1;
+    width: auto;
+    height: 80%;
 }
 .container:hover p {
     color: black;
@@ -45,7 +46,6 @@ p {
     color: rgb(13, 85, 229);
 }
 .icon {
-    /* width: 20px; */
     height: 2em;
     padding: 0;
 }
@@ -73,18 +73,28 @@ p {
 .wraper {
     border-bottom: thick solid gray;
 }
-@keyframes hover {
-    from { display: none; }
-    to { opacity: 1; }
-  }
+
 
 .bug img, .musician img, .programer_life img, .young_programmer img, .trash img {
-    display: none;
     opacity: 0;
+    height: 0%;
+    width: 0%;
+}
+.title {
+display: flex;
+justify-content: space-between
 }
 .wraper:hover img {
-        animation: hover 5s;
-        display: inline;
+    position: static;
+    opacity: 1;
+    width: auto;
+    height: 100%;
+    transition: 2s ease;
+    }
+.wraper:hover .icon {
+    rotate: 45deg;
+    padding: 0;
+    transition: 0s;
     }
 
 input[name=title]{
@@ -93,21 +103,24 @@ input[name=title]{
 
       label{
         cursor: pointer;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
         width: 50rem;
         justify-content: space-between;
         padding: 1em 0 ;
     }
-    input[name=title]:checked + label>.icon {
-        display: inline !important;
-        opacity: 1 !important;
-        transform: rotate(45deg);
+    input[name=title]:checked + label>.title .icon {
+        opacity: 1;
+        width: auto;
+        height: 80%;
+        rotate: 45deg;
         padding: 0;
       }
-      input[name=title]:checked + label~img {
-        display: inline !important;
-        opacity: 1 !important;
+      input[name=title]:checked + label>img {
+        width: auto;
+        height: auto;
+        opacity: 1;
       }
-      input[name=title]:checked + label>p {
+      input[name=title]:checked + label>.title p {
         color: black;
       }
